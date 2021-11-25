@@ -39,3 +39,12 @@ $$
 $$
 \log (f(x))=-\frac{(x-\mu)^{2}}{2 \sigma^{2}}-\log (\sigma)-\log (\sqrt{2 \pi})
 $$
+
+### kl_divergence
+
+$$
+D_{K L}(P \| Q)=\sum_{i=1}^{N}\left[p\left(x_{i}\right) \log p\left(x_{i}\right)-p\left(x_{i}\right) \log q\left(x_{i}\right)\right]
+$$
+
+性质：必然大于0
+
