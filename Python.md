@@ -14,7 +14,18 @@ data = pd.read_excel(filenale)
 
 ## Xlsx
 
+```python
+def write_excle(output_file,keywords_tuple):
+    k1,k2=keywords_tuple
+    workbook = xlsxwriter.Workbook(output_file)
+    worksheet = workbook.add_worksheet()
 
+    worksheet.write(1, 0, 'keywords900w_before')
+    worksheet.write(1, 1, 'keywords900w_cluster_before')
+        
+    worksheet.insert_image(idx * 20 + 2,30, pic, {'x_scale': scale, 'y_scale': scale})
+    workbook.close()
+```
 
 ## Datetime
 
