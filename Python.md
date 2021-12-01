@@ -8,8 +8,23 @@
 import pandas as pd
 
 data = pd.read_excel(filenale)
-
 # 读取之后有很多columns，按名字读取列
+
+# 1. 选取行列
+data['column name']  # 按名字读取列 可以列表里面再列表取多列
+data[:4]  # 读取前n行
+data['column name'].plot()  # 可以直接调matplotlib
+
+.value_counts()  # 统计元素的个数
+
+# 2. 真值判断
+complaints['Complaint Type'] == "Noise - Street/Sidewalk"
+# 会返回 True or False 的dataframe
+# 还可以复杂情况的比较
+is_noise = complaints['Complaint Type'] == "Noise - Street/Sidewalk"
+in_brooklyn = complaints['Borough'] == "BROOKLYN"
+
+complaints[is_noise & in_brooklyn][['Complaint Type', 'Borough', 'Created Date', 'Descriptor']][:10]  # 选取部分colomn和row
 ```
 
 ## Xlsx
